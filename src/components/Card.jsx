@@ -22,20 +22,20 @@ Notes:
   this data into the component.
 */
 
-export default function Card() {
+export default function Card(props) {
     return (
         <div className="card">
             <div className="card--status">
                 SOLD OUT
             </div>
-            <img src={katie} alt="katie-zeferes" />
+            <img src={`/src/assets/${props.img}`} alt="katie-zeferes" />
                 <div className="card--stats">
                     <img src={star}  alt="star" className="star"/>
-                    <small className="card--rating">&nbsp;5.0&nbsp;</small>
-                    <small className="card--more--info">(6) &bull; USA</small>
+                    <small className="card--rating">&nbsp;{props.rating}&nbsp;</small>
+                    <small className="card--more--info">({props.reviewCount}) &bull; {props.country}</small>
                 </div>
-                <small className="card--desc">Life lessons with Katie Zaferes</small>
-                <small className="card--price"><strong>From $136 </strong>/ person</small>
+                <small className="card--desc">{props.title}</small>
+                <small className="card--price"><strong>From ${props.price} </strong>/ person</small>
             </div>
     )
 }
