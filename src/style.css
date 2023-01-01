@@ -47,13 +47,20 @@ nav {
   font-size: 16px;
   margin-top: 0px;
 }
-
+.cards-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+  margin-left: 25px;
+}
 .card {
   position: relative;
   flex-direction: column;
   max-width: 176px;
   display: flex;
   overflow: hidden;
+  flex: 0 0 auto;
 }
 .card--status {
   position: absolute;
@@ -70,7 +77,7 @@ nav {
 .card img {
   max-width: 100%;
   max-height: 100%;
-  border-radius: 9px;
+  border-radius: 8px;
   margin-bottom: 7px;
 }
 .card--stats {

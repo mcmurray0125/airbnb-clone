@@ -6,7 +6,6 @@ import data from './data'
 /*
 Challenge:
 
-- import the array of data from data.js
 - map over the array to create <Card /> components
 - display the array of card components under the navbar
   (in place of the current <Card /> component)
@@ -16,18 +15,30 @@ still be block elements, stacked vertically. We'll add styling later.
 */
 
 export default function App() {
+          //Hero//
+
+  const cardElements = data.map(i => {
+    return (
+      <Card
+          key={i.id}
+          rating={i.stats.rating}
+          reviewCount={i.stats.reviewCount}
+          img={i.coverImg}
+          title={i.title}
+          description={i.description}
+          price={i.price}
+          stats={i.stats}
+          location={i.location}
+          openSpots={i.openSpots}
+          />
+    )
+  })
   return (
     <div>
-      <Navbar/>
-      {/* <Hero/> */}
-      <Card
-          img="katie-zaferes.png"
-          rating="5.0"
-          reviewCount={6}
-          country="USA"
-          title="Life Lessons with Katie Zaferes"
-          price={136}
-      />
+        <Navbar/>
+        <section className='cards-list'>
+        {cardElements}
+        </section>
     </div>
   )
 }
