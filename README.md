@@ -1,1 +1,1 @@
-Airbnb Clone initial commit.
+Mapping the data to the card.
