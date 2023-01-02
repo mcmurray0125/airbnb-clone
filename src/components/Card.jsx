@@ -16,7 +16,7 @@ export default function Card(props) {
             {badgeText && <div className="card--status">
                 {badgeText}
             </div>}
-            <img src={`/src/images/${props.item.coverImg}`} alt="katie-zeferes" />
+            <img src={`./src/images/${props.item.coverImg}`} alt="card-image" />
                 <div className="card--stats">
                     <img src={star}  alt="star" className="star"/>
                     <small className="card--rating">&nbsp;{props.item.stats.rating}&nbsp;</small>
